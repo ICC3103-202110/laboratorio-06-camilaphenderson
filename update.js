@@ -1,3 +1,5 @@
+
+
 function converter(input,model){
     if (input.from == 'Celsius' && input.to =='Fahrenheit'){
         return newValue = (parseInt(input.value)*1.8)+32
@@ -41,3 +43,4 @@ function update(input,model){
     module.exports = {
         update
     }
+//
