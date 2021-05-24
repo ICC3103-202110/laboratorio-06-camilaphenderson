@@ -1,21 +1,21 @@
 function converter(input,model){
     if (input.from == 'Celsius' && input.to =='Fahrenheit'){
-        return newValue = ((input.value)*1.8)+32
+        return newValue = (parseInt(input.value)*1.8)+32
         }
     else if (input.from == 'Celsius' && input.to =='Kelvin'){
-        return  newValue = (input.value) + 273.15
+        return  newValue = parseInt(input.value) + 273.15
     }
     else if (input.from == 'Fahrenheit' && input.to =='Kelvin'){
-        return newValue = (((input.value)-32)*5/9) + 273.15 
+        return newValue = ((parseInt(input.value)-32)*5/9) + 273.15 
     }
     else if (input.from == 'Fahrenheit' && input.to =='Celsius'){
-        return newValue =  ((input.value)-32)*5/9
+        return newValue =  (parseInt(input.value)-32)*5/9
     }
     else if (input.from == 'Kelvin' && input.to =='Celsius'){
-        return newValue = (input.value) -273.15
+        return newValue = parseInt(input.value) -273.15
     }
     else if (input.from == 'Kelvin' && input.to =='Fahrenheit'){
-        return newValue = (((input.value)- 273.15)* 1.8) + 32
+        return newValue = ((parseInt(input.value)- 273.15)* 1.8) + 32
     }
 }
 function update(input,model){
