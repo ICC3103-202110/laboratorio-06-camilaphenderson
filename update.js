@@ -1,4 +1,23 @@
 function update(input,model){
+    if (input.from == 'Celsius' && input.to =='Fahrenheit'){
+        return newValue = ((input.value)*1.8)+32
+        }
+    else if (input.from == 'Celsius' && input.to =='Kelvin'){
+        return  newValue = (input.value) + 273.15
+    }
+    else if (input.from == 'Fahrenheit' && input.to =='Kelvin'){
+        return newValue = (((input.value)-32)*5/9) + 273.15 
+    }
+    else if (input.from == 'Fahrenheit' && input.to =='Celsius'){
+        return newValue =  ((input.value)-32)*5/9
+    }
+    else if (input.from == 'Kelvin' && input.to =='Celsius'){
+        return newValue = (input.value) -273.15
+    }
+    else if (input.from == 'Kelvin' && input.to =='Fahrenheit'){
+        return newValue = (((input.value)- 273.15)* 1.8) + 32
+    };
+
     if (input.YesorNo === 'Yes')
         return{
             ...model,
@@ -16,24 +35,8 @@ function update(input,model){
             rightUnit: input.to
         }
     
-function converter(input,model){
-    if (input1.lunit == 'Celsius' && input1.runit =='Fahrenheit'){
-        return newValue = ((input.value)*1.8)+32
-        }
-    else if (input1.lunit == 'Celsius' && input1.runit =='Kelvin'){
-        return  newValue = (input.value) + 273.15
-    }
-    else if (input1.lunit == 'Fahrenheit' && input1.runit =='Kelvin'){
-        return newValue = (((input.value)-32)*5/9) + 273.15 
-    }
-    else if (input1.lunit == 'Fahrenheit' && input1.runit =='Celsius'){
-        return newValue =  ((input.value)-32)*5/9
-    }
-    else if (input1.lunit == 'Kelvin' && input1.runit =='Celsius'){
-        return newValue = (input.value) -273.15
-    }
-    else if (input1.lunit == 'Kelvin' && input1.runit =='Fahrenheit'){
-        return newValue = (((input.value)- 273.15)* 1.8) + 32
     }
     
-}
+    module.exports = {
+        update
+    }
