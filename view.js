@@ -10,7 +10,7 @@ function createTitle(){
             'Temperature Converter',
             {
                 horizontalLayout: 'full',
-                font: 'Caligraphy2'
+                font: 'Cursive'
             }
         )
     )
@@ -30,7 +30,7 @@ function createTable(model){
 function input(model){
     return inquirer.prompt([
         {
-            name: 'YesNo',
+            name: 'YesorNo',
             type: 'list',
             message: 'Left temperature is source?',
             choices: ['Yes','No'],
@@ -59,7 +59,7 @@ function input(model){
         name:'to',
         message: 'To?',
         choices: ['Celsius','Fahrenheit','Kelvin'],
-        default: rightUnit}
+        default: 'N'}
     ])
 }
 

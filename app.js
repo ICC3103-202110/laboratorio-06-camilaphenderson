@@ -1,4 +1,4 @@
-const{inputAndListForm} = require('./view')
+const{input} = require('./view')
 const {printTable} = require('console-table-printer')
 const update = require('./update')
 
