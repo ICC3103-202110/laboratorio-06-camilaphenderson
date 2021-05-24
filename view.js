@@ -7,7 +7,7 @@ const {printTable} = require('console-table-printer')
 function createTitle(){
     return chalk.yellow(
         figlet.textSync(
-            'Temperature Converter',
+            'Unit Converter',
             {
                 horizontalLayout: 'full',
                 font: 'Cursive'
@@ -17,17 +17,17 @@ function createTitle(){
 }
 
 function createTable(model){
+    const {leftValue} = model
+    const {leftUnit} = model
+    const {rightValue} = model
+    const{rightUnit} = model
     return [
-        {
-        'Left Value': model.leftValue,
-        'Left Unit': model.leftUnit,
-        'Right Value': model.rightValue,
-        'Right Unit': model.rightUnit
-        }
+        {'leftValue': leftValue,'leftUnit':leftUnit,
+        'rightValue': rightValue,'rightUnit': rightUnit}
     ]
 }
 
-function input(model){
+function askInput(model){
     return inquirer.prompt([
         {
             name: 'YesorNo',
@@ -72,6 +72,6 @@ function view(model){
 
 module.exports = {
     view,
-    input,
+    askInput,
 
 }
