@@ -14,8 +14,8 @@ async function app (state,update,view){
         const updated = update(input, model)
         state = {
             ...state,
-            model: updatedModel,
-            currentView: view(updatedModel)
+            model: updated,
+            currentView: view(updated)
         }
     }
 }

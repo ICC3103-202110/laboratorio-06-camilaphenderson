@@ -1,4 +1,4 @@
-function update(input,model){
+function converter(input,model){
     if (input.from == 'Celsius' && input.to =='Fahrenheit'){
         return newValue = ((input.value)*1.8)+32
         }
@@ -16,27 +16,28 @@ function update(input,model){
     }
     else if (input.from == 'Kelvin' && input.to =='Fahrenheit'){
         return newValue = (((input.value)- 273.15)* 1.8) + 32
-    };
-
+    }
+}
+function update(input,model){
     if (input.YesorNo === 'Yes')
         return{
             ...model,
             leftValue: input.value,
             leftUnit: input.from,
-            rightValue: newValue,
+            rightValue: converter(input,model),
             rightUnit: input.to
         }
     else 
         return{
             ...model,
-            leftValue: newValue,
+            leftValue: converter(input,model),
             leftUnit: input.from,
             rightValue: input.value,
             rightUnit: input.to
         }
     
     }
-    
+
     module.exports = {
         update
     }
