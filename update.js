@@ -1,5 +1,5 @@
 function update(input,model){
-    if (input.YesNo === 'Yes')
+    if (input.YesorNo === 'Yes')
         return{
             ...model,
             leftValue: input.value,
